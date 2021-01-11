@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b0a4580134.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/weatherapp.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <title>Weather App</title>
+</head>
+<body>
+<div class="container-fluid p-0 bg-lavender" id="main-container">
+    <div class="container-fluid bg-mint" id="nav-container">
+        <nav class="navbar navbar-light bg-mint">
+            <a class="navbar-brand heading-font" href="#"><i class="fas fa-leaf text-success"></i> <span class="d-none d-md-inline"> Minty Fresh Weather</span></a>
+            <div class="navbar-nav" id="navbarSupportedContent">
+                <span class="navbar-text heading-font" id="current-text">Current Location: <span class="navbar-text font-weight-bold" id="current-city">San Antonio, Texas</span></span>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid mt-3" id="body-container">
+        <div class="container" id="search-container">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 flex-grow-1" type="search" placeholder="Enter a location" aria-label="Search" id="search-input">
+                <button class="btn bg-peach my-2 my-sm-0" type="submit" id="search-btn">Search</button>
+            </form>
+        </div>
+        <div class="container mt-3" id="card-container">
+            <div class="row" id="card-row">
+                <div class="col-12 col-md-6 pr-3">
+                    <div class="row" id="current-row">
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row justify-content-end" id="forecast-row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3 p-3" id="map"></div>
+    </div>
+    <div class="container-fluid mt-3 p-0" id="footer-container">
+        <footer class="bg-mint" id="footer">
+            <div class="container">
+                <p class="heading-font text-center" id="current-text2">Current Location: <span class="navbar-text font-weight-bold" id="current-city2">San Antonio, Texas</span></p>
+            </div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/keys.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/weatherapp.js"></script>
+</body>
+</html>
